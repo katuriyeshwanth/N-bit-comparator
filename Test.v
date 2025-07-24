@@ -11,3 +11,14 @@ a=16'h2222;b=16'h2222;#5
 $stop;
 end
 endmodule
+
+module test;
+reg a1,a0,b1,b0;
+wire lt,gt,eq;
+comparator dut(a1,a0,b1,b0,lt,gt,eq);
+initial
+begin
+a1=1;a0=1; b1=1;b0=1; #5
+$stop;
+end
+endmodule
